@@ -4,7 +4,7 @@
 # Contributor: Simon Legner <Simon.Legner@gmail.com>
 
 pkgname=bazel
-pkgver=6.3.1
+pkgver=6.3.2
 pkgrel=1
 pkgdesc='Correct, reproducible, and fast builds for everyone'
 arch=('x86_64')
@@ -15,7 +15,7 @@ makedepends=('git' 'protobuf' 'python' 'gcc12')
 options=('!distcc' '!strip')
 source=("https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"
         "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip.sig")
-b2sums=('f5876a05dcfed8d6e86593eb73a46bc215ca49d011c4e99d4aae1e2f98c66a769807bbd216945041a60239d573f64cf5fba7e85d8b14499c53a573070a45e309'
+b2sums=('2da884561343707ab0fa79667759fe6b30522a0aa7ea2bd12b910e066fd9ebb1a6674bc98538a48b0abead19aa22736d2c00df3d8fddcf4a8dc5421bae32a1a2'
         'SKIP')
 validpgpkeys=('71A1D0EFCFEB6281FD0437C93D5919B448457EE0')
 
