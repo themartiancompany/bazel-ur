@@ -16,8 +16,10 @@ pkgbase = bazel
 	options = !strip
 	source = https://github.com/bazelbuild/bazel/releases/download/7.0.2/bazel-7.0.2-dist.zip
 	source = https://github.com/bazelbuild/bazel/releases/download/7.0.2/bazel-7.0.2-dist.zip.sig
+	source = bazel-7.0.2-python_312.patch
 	validpgpkeys = 71A1D0EFCFEB6281FD0437C93D5919B448457EE0
 	b2sums = fb3f1d0c35b242f15dd9680cb7b6addf0473aa291b3d6b09af0f4709e454e8dd91f88dc74f82768b560e199e4974a0cb11523b08369baa5a1117c0a9a020a1cf
 	b2sums = SKIP
+	b2sums = e13a9c5b43336941d1bb35685d6bf8761b70349aca705ff6202018180e7291efcb4dbf8415ad9c788dcf6f5d956cbca8e1d8a8b663a504dd537e6f682ad04202
 
 pkgname = bazel
