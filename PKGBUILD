@@ -5,14 +5,14 @@
 
 pkgname=bazel
 pkgver=7.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Correct, reproducible, and fast builds for everyone'
 arch=('x86_64')
 license=('Apache-2.0')
 url='https://bazel.build/'
 depends=('java-environment=11' 'libarchive' 'zip' 'unzip')
 makedepends=('git' 'protobuf' 'python')
-options=('!distcc' '!strip')
+options=('!debug' '!strip')
 source=(
   "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"{,.sig}
   $pkgname-7.0.2-python_312.patch

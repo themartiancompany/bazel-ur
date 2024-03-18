@@ -1,7 +1,7 @@
 pkgbase = bazel
 	pkgdesc = Correct, reproducible, and fast builds for everyone
 	pkgver = 7.1.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://bazel.build/
 	arch = x86_64
 	license = Apache-2.0
@@ -12,7 +12,7 @@ pkgbase = bazel
 	depends = libarchive
 	depends = zip
 	depends = unzip
-	options = !distcc
+	options = !debug
 	options = !strip
 	source = https://github.com/bazelbuild/bazel/releases/download/7.1.0/bazel-7.1.0-dist.zip
 	source = https://github.com/bazelbuild/bazel/releases/download/7.1.0/bazel-7.1.0-dist.zip.sig
