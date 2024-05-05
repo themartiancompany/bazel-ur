@@ -5,7 +5,7 @@
 
 pkgname=bazel
 pkgver=7.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Correct, reproducible, and fast builds for everyone'
 arch=('x86_64')
 license=('Apache-2.0')
