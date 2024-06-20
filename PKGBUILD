@@ -4,20 +4,20 @@
 # Contributor: Simon Legner <Simon.Legner@gmail.com>
 
 pkgname=bazel
-pkgver=7.1.1
-pkgrel=2
+pkgver=7.2.0
+pkgrel=1
 pkgdesc='Correct, reproducible, and fast builds for everyone'
 arch=('x86_64')
 license=('Apache-2.0')
 url='https://bazel.build/'
-depends=('java-environment=11' 'libarchive' 'zip' 'unzip')
+depends=('java-environment=21' 'libarchive' 'zip' 'unzip')
 makedepends=('git' 'protobuf' 'python')
 options=('!debug' '!strip')
 source=(
   "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"{,.sig}
   $pkgname-7.0.2-python_312.patch
 )
-b2sums=('ef0dcfd50b81c4f8d9455967fc1c1777cd240c9a6f347f0f0f52aa70fa8a32507e5eb7af2243cbe324570f23a3540b7b42b96520f41b81543fbd5ae084a89cec'
+b2sums=('93c199af3138b277a326f9b0a84160d069726dac55489190c849613786850fd548b727108d256be24e1fcd5f0393d5881a1647a12458762603b95d0dbb266a30'
         'SKIP'
         'e13a9c5b43336941d1bb35685d6bf8761b70349aca705ff6202018180e7291efcb4dbf8415ad9c788dcf6f5d956cbca8e1d8a8b663a504dd537e6f682ad04202')
 validpgpkeys=('71A1D0EFCFEB6281FD0437C93D5919B448457EE0')
