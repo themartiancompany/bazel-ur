@@ -1,6 +1,6 @@
 pkgbase = bazel
 	pkgdesc = Correct, reproducible, and fast builds for everyone
-	pkgver = 7.2.0
+	pkgver = 7.2.1
 	pkgrel = 1
 	url = https://bazel.build/
 	arch = x86_64
@@ -12,13 +12,14 @@ pkgbase = bazel
 	depends = libarchive
 	depends = zip
 	depends = unzip
+	depends = which
 	options = !debug
 	options = !strip
-	source = https://github.com/bazelbuild/bazel/releases/download/7.2.0/bazel-7.2.0-dist.zip
-	source = https://github.com/bazelbuild/bazel/releases/download/7.2.0/bazel-7.2.0-dist.zip.sig
+	source = https://github.com/bazelbuild/bazel/releases/download/7.2.1/bazel-7.2.1-dist.zip
+	source = https://github.com/bazelbuild/bazel/releases/download/7.2.1/bazel-7.2.1-dist.zip.sig
 	source = bazel-7.0.2-python_312.patch
 	validpgpkeys = 71A1D0EFCFEB6281FD0437C93D5919B448457EE0
-	b2sums = 93c199af3138b277a326f9b0a84160d069726dac55489190c849613786850fd548b727108d256be24e1fcd5f0393d5881a1647a12458762603b95d0dbb266a30
+	b2sums = b35f069b7855e24b9761518aad169e666c8fe208fd18b2fe78a4582cb91b7891f309ca25367fad1a47f78f336e233d2d2f2509f17ba370619dd86df9587b1210
 	b2sums = SKIP
 	b2sums = e13a9c5b43336941d1bb35685d6bf8761b70349aca705ff6202018180e7291efcb4dbf8415ad9c788dcf6f5d956cbca8e1d8a8b663a504dd537e6f682ad04202
 
