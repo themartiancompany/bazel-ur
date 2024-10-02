@@ -4,7 +4,7 @@
 # Contributor: Simon Legner <Simon.Legner@gmail.com>
 
 pkgname=bazel
-pkgver=7.3.1
+pkgver=7.3.2
 pkgrel=1
 pkgdesc='Correct, reproducible, and fast builds for everyone'
 arch=('x86_64')
@@ -17,7 +17,7 @@ source=(
   "https://github.com/bazelbuild/bazel/releases/download/${pkgver}/bazel-${pkgver}-dist.zip"{,.sig}
   $pkgname-7.0.2-python_312.patch
 )
-b2sums=('f74aa05e115c8e25119e5d8c159fc2f241bbe5f8e82dac125b52d921c5f0c9e09ba9ba21ce7bd53baf538c9cd095072629beeab51f8faf5f406cbbad149bfd87'
+b2sums=('d650255d9573a831bfc0a7a68f0cce71e606bdee6c0eac1e6582032663745c61ac83d3310f9ea60b88886f0fb48278bb75852bcc51b23060a739f932868b34cc'
         'SKIP'
         'e13a9c5b43336941d1bb35685d6bf8761b70349aca705ff6202018180e7291efcb4dbf8415ad9c788dcf6f5d956cbca8e1d8a8b663a504dd537e6f682ad04202')
 validpgpkeys=('71A1D0EFCFEB6281FD0437C93D5919B448457EE0')
