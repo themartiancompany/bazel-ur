@@ -156,7 +156,7 @@ _dep_patches_sums=(
   '138c2a07d240b3f8261aff26032b11c16cfd396d24020aa29a3f7fb31bb9c3e0ff90ada80ab847a3d3989e456ccfbc6e09c5453417191595e8558f5d325c7937'
 )
 source=(
-  "${_http}/releases/download/${pkgver}/${_tarname}-dist.zip"{,.sig}
+  "${_url}/releases/download/${pkgver}/${_tarname}-dist.zip"{,.sig}
 )
 b2sums=(
   '76da69aa2ee53db5c2151d02cfc165489207883245b3e5b16a44020babac8eb8441beceef47f970e27b9897a1add3f4954e3ca5d3b2bed18b8493fe9ab036775'
