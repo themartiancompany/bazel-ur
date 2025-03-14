@@ -24,7 +24,7 @@
 # Maintainer: Pellegrino Prevete (dvorak) <pellegrinoprevete@gmail.com>
 # Maintainer: Pellegrino Prevete (dvorak) <dvorak@0x87003Bd6C074C713783df04f36517451fF34CBEf>
 # Maintainer: Robert Kirkman
-# Maintainer: Chongyun Lee
+# Maintainer: Chongyun Lee (licy183)
 # Maintainer: Sven-Hendrik Haase <svenstaro@archlinux.org>
 # Maintainer: Konstantin Gizdov <arch@kge.pw>
 # Contributor: Frederik Schwan <frederik dot schwan at linux dot com>
