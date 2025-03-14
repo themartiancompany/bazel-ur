@@ -363,7 +363,7 @@ _usr_get() {
     dirname \
       "$(command \
            -v \
-	         "env")"
+           "env")")"
   echo \
     "$(dirname \
          "${_bin}")"
