@@ -116,7 +116,7 @@ options=(
   '!strip'
 )
 _http="https://github.com"
-_ns="${_pkg}"
+_ns="${_pkg}build"
 _url="${_http}/${_ns}/${_pkg}"
 _tarname="${_pkg}-${pkgver}"
 _patches=(
