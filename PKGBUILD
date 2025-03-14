@@ -176,6 +176,19 @@ validpgpkeys=(
   '71A1D0EFCFEB6281FD0437C93D5919B448457EE0'
 )
 
+_usr_get() {
+  local \
+    _bin
+  _bin="$( \
+    dirname \
+      "$(command \
+           -v \
+           "env")")"
+  echo \
+    "$(dirname \
+         "${_bin}")"
+}
+
 _sed_verbose() {
 	local \
     _path="${1}" \
@@ -215,7 +228,10 @@ _fix_hardcoded_paths() {
     _nixpkgs_ref \
     _path \
     _file \
+    _usr \
     _msg=()
+  _usr="$( \
+    _usr_get)"
   _nix_ns="NixOS"
   _nix_ver="release-23.11"
   _nixpkgs_url="${_http}/${_nix_ns}/nixpkgs"
@@ -264,20 +280,20 @@ _fix_hardcoded_paths() {
 		  # Only files containing /bin are taken into account.
 		  _sed_verbose \
         "${_path}" \
-        -e "s!/usr/local/bin/bash!${TERMUX_PREFIX}/bin/bash!g" \
-        -e "s!/usr/bin/bash!${TERMUX_PREFIX}/bin/bash!g" \
-        -e "s!/bin/bash!${TERMUX_PREFIX}/bin/bash!g" \
-        -e "s!/usr/bin/env bash!${TERMUX_PREFIX}/bin/bash!g" \
-        -e "s!/usr/bin/env python2!${TERMUX_PREFIX}/bin/python!g" \
-        -e "s!/usr/bin/env python!${TERMUX_PREFIX}/bin/python!g" \
-        -e "s!/usr/bin/env!${TERMUX_PREFIX}/bin/env!g" \
-        -e "s!/bin/true!${TERMUX_PREFIX}/bin/true!g"
+        -e "s!/usr/local/bin/bash!${_usr}/bin/bash!g" \
+        -e "s!/usr/bin/bash!${_usr}/bin/bash!g" \
+        -e "s!/bin/bash!${_usr}/bin/bash!g" \
+        -e "s!/usr/bin/env bash!${_usr}/bin/bash!g" \
+        -e "s!/usr/bin/env python2!${_usr}/bin/python!g" \
+        -e "s!/usr/bin/env python!${_usr}/bin/python!g" \
+        -e "s!/usr/bin/env!${_usr}/bin/env!g" \
+        -e "s!/bin/true!${_usr}/bin/true!g"
 	  done
 	# Fixup scripts that generate scripts.
   # Not fixed up by patchShebangs below.
 	_sed_verbose \
     "scripts/bootstrap/compile.sh" \
-		-e "s!/bin/bash!${TERMUX_PREFIX}/bin/bash!g"
+		-e "s!/bin/bash!${_usr}/bin/bash!g"
 	# reconstruct the now patched builtins_bzl.zip
 	pushd \
     "${_builtins_bzl}_zip" &>/dev/null
@@ -313,10 +329,10 @@ _fix_hardcoded_paths() {
                -q \
                -E \
                -v \
-               "^#! ?${TERMUX_PREFIX}"; then
+               "^#! ?${_usr}"; then
 			_sed_verbose \
         "${_file}" \
-        -E "1 s@^#\!(.*)/bin/(.*)@#\!${TERMUX_PREFIX}/bin/\2@"
+        -E "1 s@^#\!(.*)/bin/(.*)@#\!${_usr}/bin/\2@"
 		fi
 	done < \
     <(find \
@@ -356,18 +372,6 @@ prepare() {
   fi
 }
 
-_usr_get() {
-  local \
-    _bin
-  _bin="$( \
-    dirname \
-      "$(command \
-           -v \
-           "env")")"
-  echo \
-    "$(dirname \
-         "${_bin}")"
-}
 
 build() {
   local \
